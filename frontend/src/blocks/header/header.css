@@ -1,0 +1,26 @@
+.header {
+  max-width: 880px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header:after {
+  content: "";
+  width: 100%;
+  border-bottom: solid 1px #545454;
+  position: absolute;
+  opacity: 0.7;
+  top: 112px;
+}
+
+@media (max-width: 475px) {
+  .header {
+    max-width: 320px;
+  }
+  .header:after {
+    top: 80px;
+  }
+}
