@@ -81,11 +81,10 @@ class Api {
 }
 
 const api = new Api({
-    address: 'https://mesto.nomoreparties.co/v1/cohort36',
+    address: 'https://api.domainname.kmariasha.nomoredomains.sbs',
     headers: {
-        authorization: '55b469c4-8b27-481f-8422-268744bde49b',
-        "Content-Type":
-            "application/json",
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzBiMjJhM2IyYmZlODU1ODE3NjNmYTEiLCJpYXQiOjE2NjE2NzYwNTQsImV4cCI6MTY2MjI4MDg1NH0.tvu9OxWTz6W9Dj-ArJMa9PSL7i2ELdFRQcqBXBXymPA',
+        "Content-Type": "application/json",
     }
 });
 
