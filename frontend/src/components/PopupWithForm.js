@@ -14,7 +14,7 @@ const PopupWithForm = ({name, isOpen, onClose, title, children, handleSubmit, bu
                     <h2 className="popup__title">{title}</h2>
                     {children}
                     <button className="popup__button popup__button_submit popup__button_disabled" type="submit"
-                            value="submit">
+                            valuue="sbmit">
                         { buttonTitle } 
                     </button>
                 </form>

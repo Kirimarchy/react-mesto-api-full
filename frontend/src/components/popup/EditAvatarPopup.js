@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import PopupWithForm from "../PopupWithForm";
-import currentUserContext from "../../contexts/CurrentUserContext"
-//На этот раз вместо управляемых компонентов используйте реф,
-// чтобы получить прямой доступ к DOM-элементу инпута и его значению.
+
 const EditAvatarPopup = (props) => {
     const [imageLink, setImageLink] = useState('');
-    const currentUser = React.useContext(currentUserContext);
 
     function handleSubmit(e) {
-        e.preventDefault();// Не забудьте обновлять аватар локально после завершения запроса.
+        e.preventDefault();
         props.onUpdateAvatar({
-            avatar: imageLink, // Значение инпута, полученное с помощью рефа */,
+            avatar: imageLink, 
         });
     }
 

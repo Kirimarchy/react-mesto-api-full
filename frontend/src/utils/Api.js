@@ -83,8 +83,9 @@ class Api {
 const api = new Api({
     address: 'https://api.domainname.kmariasha.nomoredomains.sbs',
     headers: {
-        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzBiMjJhM2IyYmZlODU1ODE3NjNmYTEiLCJpYXQiOjE2NjE2NzYwNTQsImV4cCI6MTY2MjI4MDg1NH0.tvu9OxWTz6W9Dj-ArJMa9PSL7i2ELdFRQcqBXBXymPA',
-        "Content-Type": "application/json",
+        "Content-Type":
+            "application/json",
+        authorization: `Bearer ${localStorage.getItem('token')}`,
     }
 });
 

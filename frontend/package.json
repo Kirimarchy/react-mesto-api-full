@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -16,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && rsync -r ./build/ kmariasha@51.250.103.155:/home/kmariasha/frontend"
+    "deploy": "npm run build && scp -r ./build/* mariasha@84.252.137.200:/home/mariasha/mesto-api-full/frontend/build"
   },
   "eslintConfig": {
     "extends": [

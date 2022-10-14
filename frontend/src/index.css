@@ -43,6 +43,7 @@
 @import url(./blocks/popup/_opened/popup_opened.css);
 @import url(./blocks/popup/_image/popup_image.css);
 @import url(./blocks/popup/_mesto/popup_mesto.css);
+@import url(./blocks/popup/_result/popup_result.css);
 @import url(./blocks/popup/__error/popup__error.css);
 
 @import url(./blocks/figure/figure.css);
@@ -51,4 +52,6 @@
 
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/footer/__copyright/footer__copyright.css);
+
+@import url(./blocks/entrance/entrance.css);
 

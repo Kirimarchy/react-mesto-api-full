@@ -5,8 +5,7 @@
   cursor: pointer;
   text-decoration: none;
   width: 358px;
-  height: 50px;
-  background-color: #000000;
+  height: 50px;;
   border-radius: 2px;
   justify-content: center;
   align-items: center;
@@ -17,7 +16,8 @@
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  color: #fff;
+  color: #ffff;
+  background-color: black;
 }
 
 @media (max-width: 530px) {
