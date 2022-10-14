@@ -17,6 +17,30 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(requestLogger); // подключаем логгер запросов
 
+const allowedCors = [
+  'https://kmariasha.nomoredomains.sbs',
+  'http://kmariasha.nomoredomains.sbs',
+  'localhost:3000',
+];
+
+// обработка CORS-запросов
+app.use((req, res, next) => {
+  const { origin } = req.headers;
+  if (allowedCors.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', '*');
+  }
+  const { method } = req;
+  const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
+  const requestHeaders = req.headers['access-control-request-headers'];
+  if (method === 'OPTIONS') {
+    res.header('Access-Control-Allow-Methods', DEFAULT_ALLOWED_METHODS);
+    res.header('Access-Control-Allow-Headers', requestHeaders);
+    return res.end();
+  }
+  next();
+});
+
+
 app.get('/crash-test', () => {
   setTimeout(() => {
     throw new Error('Сервер сейчас упадёт');
@@ -45,7 +69,7 @@ app.use(auth);
 app.use('/cards', require('./routes/cards'));
 app.use('/users', require('./routes/users'));
 
-mongoose.connect('mongodb://localhost:27017/mestodb');
+mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
 
 app.use(() => {
   throw new NotFoundError('Такого роута не существует');

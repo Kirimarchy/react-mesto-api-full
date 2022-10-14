@@ -16,3 +16,6 @@
 **/.vscode
 
 **/build
+
+# ENV
+**/.env 
