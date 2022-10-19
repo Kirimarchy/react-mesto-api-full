@@ -125,8 +125,8 @@ const App = () => {
                 setCurrentUser(res);
                 setCurrentUserInfo(res);
                 navigate('/');
-            });
-
+            })
+            .then(updateCards());
         }
     }
 
